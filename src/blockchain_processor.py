@@ -654,7 +654,7 @@ class BlockchainProcessor(Processor):
             info = self.deviantd('getinfo')
             self.relayfee = info.get('relayfee')
             self.deviantd_height = info.get('blocks')
-            daeviantd_block_hash = self.deviantd('getblockhash', (self.deviantd_height,))
+            deviantd_block_hash = self.deviantd('getblockhash', (self.deviantd_height,))
             if self.storage.last_hash == deviantd_block_hash:
                 self.up_to_date = True
                 break
